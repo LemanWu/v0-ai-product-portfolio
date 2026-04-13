@@ -6,6 +6,14 @@ import { ArrowLeft, Sparkle, Utensils, Dumbbell, FileText, Copy, Check } from "l
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
+interface Brief {
+  topic: string
+  hook: string
+  angle: string
+  cta: string
+  avoid: string
+}
+
 interface AnalysisResult {
   viralScore: number
   emotionHook: string
@@ -18,7 +26,7 @@ interface AnalysisResult {
   structure: string[]
   tags: { label: string; level: "high" | "medium" | "low" }[]
   monetization: string[]
-  brief: string
+  brief: Brief | string
 }
 
 const examples = [
@@ -75,7 +83,13 @@ export default function AnalyzerPage() {
 
   const handleCopy = () => {
     if (result?.brief) {
-      navigator.clipboard.writeText(result.brief)
+      let textToCopy: string
+      if (typeof result.brief === "object") {
+        textToCopy = `【创作Brief】\n\n选题方向：${result.brief.topic}\n\n标题公式：${result.brief.hook}\n\n切入角度：${result.brief.angle}\n\n互动引导：${result.brief.cta}\n\n避坑指南：${result.brief.avoid}`
+      } else {
+        textToCopy = result.brief
+      }
+      navigator.clipboard.writeText(textToCopy)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     }
@@ -247,7 +261,7 @@ export default function AnalyzerPage() {
                 </div>
 
                 {/* Brief */}
-                <div className="relative rounded-xl border border-primary/30 bg-primary/5 p-6">
+                <div className="relative rounded-xl border border-[#FF2442] bg-[#3D0A0A] p-6">
                   <div className="mb-4 flex items-center justify-between">
                     <h3 className="text-sm font-medium text-foreground">创作Brief（可复用）</h3>
                     <button
@@ -258,7 +272,28 @@ export default function AnalyzerPage() {
                       {copied ? "已复制" : "复制"}
                     </button>
                   </div>
-                  <p className="whitespace-pre-wrap text-sm leading-relaxed text-muted-foreground">{result.brief}</p>
+                  {typeof result.brief === "object" && result.brief ? (
+                    <div className="flex flex-col gap-4">
+                      {[
+                        { label: "选题方向", value: result.brief.topic },
+                        { label: "标题公式", value: result.brief.hook },
+                        { label: "切入角度", value: result.brief.angle },
+                        { label: "互动引导", value: result.brief.cta },
+                        { label: "避坑指南", value: result.brief.avoid },
+                      ].map((item) => (
+                        <div key={item.label}>
+                          <span className="text-xs font-medium text-primary">{item.label}</span>
+                          <p className="mt-1 text-sm leading-relaxed text-foreground/80">
+                            {item.value || "暂无数据"}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-sm leading-relaxed text-foreground/80">
+                      {typeof result.brief === "string" ? result.brief : "分析暂时不可用，请稍后重试"}
+                    </p>
+                  )}
                 </div>
               </>
             ) : (
