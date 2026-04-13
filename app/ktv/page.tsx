@@ -27,12 +27,12 @@ const metrics = [
 
 const screenshots = [
   {
-    title: "预订管理系统界面一",
-    path: "/screenshots/Room manager1.PNG",
+    title: "Room Manager - 时间线视图",
+    path: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Room%20manager1.PNG-IrJ6QdJGD3eZMp6CeX1sRHKYmLJiDH.png",
   },
   {
-    title: "预订管理系统界面二",
-    path: "/screenshots/Room manager2.PNG",
+    title: "Room Manager - 可用性视图",
+    path: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Room%20manager2.PNG-dINujfDEe4J2YvNQ6Bglt9lkAt89kT.png",
   },
 ]
 

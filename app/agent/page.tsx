@@ -28,19 +28,19 @@ const architectureSteps = [
 const screenshots = [
   {
     title: "事前风险评估",
-    path: "/screenshots/运行截屏-事前风险评估.png",
+    path: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%B1%8F-%E4%BA%8B%E5%89%8D%E9%A3%8E%E9%99%A9%E8%AF%84%E4%BC%B0-4jZEjcxcy8ffEgwNnNsR7cVoZsdlal.png",
   },
   {
     title: "事中自动巡查+人工审查",
-    path: "/screenshots/运行截屏-事中（自动巡查+人工审查）.png",
+    path: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%B1%8F-%E4%BA%8B%E4%B8%AD%EF%BC%88%E8%87%AA%E5%8A%A8%E5%B7%A1%E6%9F%A5%2B%E4%BA%BA%E5%B7%A5%E5%AE%A1%E6%9F%A5%EF%BC%89-Ykc2jIHvkkLLKn6YK5BdV6VZkzPJg6.png",
   },
   {
     title: "事后反馈",
-    path: "/screenshots/运行截屏-事后反馈.png",
+    path: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%B1%8F-%E4%BA%8B%E5%90%8E%E5%8F%8D%E9%A6%88-CgD2GE47j4mzKZEuG7gOkLEza3KMbG.png",
   },
   {
     title: "事后反馈及总结",
-    path: "/screenshots/运行截屏-事后反馈及总结.png",
+    path: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%B1%8F-%E4%BA%8B%E5%90%8E%E5%8F%8D%E9%A6%88%E5%8F%8A%E6%80%BB%E7%BB%93-vXrkmQwVDfKaAjkfwKQS6SrfmvEcmo.png",
   },
 ]
 
