@@ -21,12 +21,14 @@ const projects = [
     tags: ["AI Agent", "平台治理"],
     description: "自动扫描违规内容，生成结构化风险报告",
     icon: <ShieldAlert className="h-5 w-5" />,
+    href: "/agent",
   },
   {
     title: "KTV智能运营系统",
     tags: ["商业落地", "真实场景"],
     description: "Booths Karaoke真实部署的AI预订管理系统",
     icon: <Music className="h-5 w-5" />,
+    href: "/ktv",
   },
 ]
 
