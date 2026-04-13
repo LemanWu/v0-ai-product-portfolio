@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { cn } from "@/lib/utils"
 
 interface ProjectCardProps {
@@ -7,14 +8,19 @@ interface ProjectCardProps {
   tags: string[]
   description: string
   icon: React.ReactNode
+  href?: string
 }
 
-export function ProjectCard({ title, tags, description, icon }: ProjectCardProps) {
+export function ProjectCard({ title, tags, description, icon, href }: ProjectCardProps) {
+  const Wrapper = href ? Link : "div"
+  const wrapperProps = href ? { href } : {}
+  
   return (
-    <div
+    <Wrapper
+      {...wrapperProps}
       className={cn(
-        "group relative rounded-xl border border-border bg-card p-6",
-        "transition-all duration-300 ease-out",
+        "group relative block rounded-xl border border-border bg-card p-6",
+        "transition-all duration-300 ease-out cursor-pointer",
         "hover:border-primary hover:shadow-[0_0_30px_rgba(255,36,66,0.15)]"
       )}
     >
@@ -37,6 +43,6 @@ export function ProjectCard({ title, tags, description, icon }: ProjectCardProps
       </div>
 
       <p className="text-sm leading-relaxed text-muted-foreground">{description}</p>
-    </div>
+    </Wrapper>
   )
 }

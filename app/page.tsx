@@ -7,12 +7,14 @@ const projects = [
     tags: ["内容生态", "违规检测"],
     description: "实时检测违规风险，AI评分种草力",
     icon: <PenLine className="h-5 w-5" />,
+    href: "/editor",
   },
   {
     title: "爆款笔记分析仪",
     tags: ["用户洞察", "种草经济"],
     description: "拆解爆款公式，生成可复用创作Brief",
     icon: <TrendingUp className="h-5 w-5" />,
+    href: "/analyzer",
   },
   {
     title: "内容风险巡查Agent",
@@ -53,6 +55,7 @@ export default function Home() {
               tags={project.tags}
               description={project.description}
               icon={project.icon}
+              href={project.href}
             />
           ))}
         </div>
