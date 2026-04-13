@@ -47,8 +47,23 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Personal Intro */}
+      <section className="mx-auto max-w-5xl px-6 pt-16 pb-8">
+        <div className="rounded-xl border border-border bg-card p-8">
+          <div className="flex flex-col items-center text-center">
+            <h2 className="text-2xl font-bold text-foreground">伍乐漫</h2>
+            <p className="mt-2 text-primary">
+              墨尔本大学数学与统计学硕士 · AI产品落地实践者
+            </p>
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+              具备统计建模与AI双重背景，在内容平台治理、商业运营两个真实场景完成AI系统从0到1落地。以下项目均为真实部署或可交互Demo。
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Projects Grid */}
-      <section className="mx-auto max-w-5xl px-6 py-16">
+      <section className="mx-auto max-w-5xl px-6 pt-8 pb-16">
         <div className="grid gap-6 sm:grid-cols-2">
           {projects.map((project) => (
             <ProjectCard
