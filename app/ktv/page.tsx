@@ -61,8 +61,8 @@ export default function KTVPage() {
       <div className="mx-auto max-w-5xl px-6 py-12">
         <div className="flex flex-col gap-12">
           {/* Project Background */}
-          <section className="rounded-xl border border-border bg-[#1A1A1A] p-6">
-            <p className="leading-relaxed text-foreground/90">
+          <section className="rounded-xl border border-primary/20 bg-primary/5 p-6">
+            <p className="leading-relaxed text-foreground">
               作为 Booths Karaoke 的运营者，我将 AI 引入实际业务——从预订管理到客户反馈分析，真实解决了人工排班效率低、客户需求分析缺失的问题
             </p>
           </section>
@@ -92,10 +92,10 @@ export default function KTVPage() {
             <div className="grid gap-6 lg:grid-cols-2">
               {screenshots.map((screenshot) => (
                 <div key={screenshot.title} className="overflow-hidden rounded-xl border border-border bg-card">
-                  <div className="border-b border-border bg-[#1A1A1A] px-4 py-3">
+                  <div className="border-b border-border bg-secondary px-4 py-3">
                     <h3 className="text-sm font-medium text-foreground">{screenshot.title}</h3>
                   </div>
-                  <div className="relative aspect-video w-full bg-[#0D0D0D]">
+                  <div className="relative aspect-video w-full bg-muted">
                     <Image
                       src={screenshot.path}
                       alt={screenshot.title}

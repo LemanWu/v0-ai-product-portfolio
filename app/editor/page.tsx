@@ -65,9 +65,9 @@ export default function EditorPage() {
 
   const getTypeColor = (type: Issue["type"]) => {
     switch (type) {
-      case "error": return "bg-red-500/20 text-red-400 border-red-500/30"
-      case "warning": return "bg-yellow-500/20 text-yellow-400 border-yellow-500/30"
-      case "success": return "bg-green-500/20 text-green-400 border-green-500/30"
+      case "error": return "bg-red-100 text-red-700 border-red-200"
+      case "warning": return "bg-yellow-100 text-yellow-700 border-yellow-200"
+      case "success": return "bg-green-100 text-green-700 border-green-200"
     }
   }
 

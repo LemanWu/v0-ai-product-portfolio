@@ -97,9 +97,9 @@ export default function AnalyzerPage() {
 
   const getTagColor = (level: "high" | "medium" | "low") => {
     switch (level) {
-      case "high": return "bg-red-500/20 text-red-400 border-red-500/30"
-      case "medium": return "bg-yellow-500/20 text-yellow-400 border-yellow-500/30"
-      case "low": return "bg-green-500/20 text-green-400 border-green-500/30"
+      case "high": return "bg-red-100 text-red-700 border-red-200"
+      case "medium": return "bg-yellow-100 text-yellow-700 border-yellow-200"
+      case "low": return "bg-green-100 text-green-700 border-green-200"
     }
   }
 
@@ -261,7 +261,7 @@ export default function AnalyzerPage() {
                 </div>
 
                 {/* Brief */}
-                <div className="relative rounded-xl border border-[#FF2442] bg-[#3D0A0A] p-6">
+                <div className="relative rounded-xl border border-primary bg-primary/5 p-6">
                   <div className="mb-4 flex items-center justify-between">
                     <h3 className="text-sm font-medium text-foreground">创作Brief（可复用）</h3>
                     <button

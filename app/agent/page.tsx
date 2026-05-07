@@ -66,8 +66,8 @@ export default function AgentPage() {
       <div className="mx-auto max-w-5xl px-6 py-12">
         <div className="flex flex-col gap-12">
           {/* Project Description */}
-          <section className="rounded-xl border border-border bg-[#1A1A1A] p-6">
-            <p className="leading-relaxed text-foreground/90">
+          <section className="rounded-xl border border-primary/20 bg-primary/5 p-6">
+            <p className="leading-relaxed text-foreground">
               基于 Claude Code 构建的自动化内容审核系统，可批量扫描小红书笔记，自动识别违规风险并生成结构化 HTML 报告
             </p>
           </section>
@@ -99,10 +99,10 @@ export default function AgentPage() {
             <div className="flex flex-col gap-8">
               {screenshots.map((screenshot) => (
                 <div key={screenshot.title} className="overflow-hidden rounded-xl border border-border bg-card">
-                  <div className="border-b border-border bg-[#1A1A1A] px-4 py-3">
+                  <div className="border-b border-border bg-secondary px-4 py-3">
                     <h3 className="text-sm font-medium text-foreground">{screenshot.title}</h3>
                   </div>
-                  <div className="relative aspect-video w-full bg-[#0D0D0D]">
+                  <div className="relative aspect-video w-full bg-muted">
                     <Image
                       src={screenshot.path}
                       alt={screenshot.title}
