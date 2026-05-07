@@ -127,7 +127,7 @@ export default function AnalyzerPage() {
                 <button
                   key={example.category}
                   onClick={() => handleExample(example)}
-                  className="group flex flex-col items-center gap-3 rounded-xl border border-border bg-card p-4 text-center transition-all hover:border-primary hover:shadow-[0_0_20px_rgba(255,36,66,0.1)]"
+                  className="group flex flex-col items-center gap-3 rounded-xl border border-border bg-card p-4 text-center transition-all hover:border-primary hover:shadow-lg"
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                     {example.icon}
