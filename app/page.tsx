@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Building2, Shield, BarChart3, PenLine, CheckCircle, Wrench } from "lucide-react"
+import { Building2, Shield, BarChart3, PenLine, CheckCircle, Wrench, TrendingUp } from "lucide-react"
 
 const projects = [
   {
@@ -51,6 +51,17 @@ const projects = [
     tags: ["内容质量评估", "实时 AI 打分", "LLM 应用"],
     href: "/editor",
   },
+  {
+    title: "瑞幸4月运营分析",
+    subtitle: "用户运营 · 知识图谱可视化",
+    description:
+      "对瑞幸咖啡4月公众号活动的深度拆解。分析其「向上争夺精品用户、向外渗透非咖啡圈、向深绑定存量用户」三大策略，以及产品分层、渠道分层、用户分层的精细化运营逻辑。用知识图谱方式可视化呈现各活动之间的关联。",
+    status: "运营分析",
+    statusType: "demo",
+    icon: <TrendingUp className="h-5 w-5" />,
+    tags: ["用户运营分析", "知识图谱", "策略拆解", "数据洞察"],
+    href: "/luckin",
+  },
 ]
 
 export default function Home() {
@@ -92,7 +103,7 @@ export default function Home() {
           <p className="mb-2 text-sm font-medium tracking-widest text-primary uppercase">
             PROJECTS
           </p>
-          <h2 className="text-3xl font-bold text-foreground">四个 AI 项目</h2>
+          <h2 className="text-3xl font-bold text-foreground">五个 AI 项目</h2>
           <p className="mt-2 text-muted-foreground">真实部署 · 可交互 Demo · 非课程作业</p>
         </div>
 
