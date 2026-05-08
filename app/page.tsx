@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Building2, Shield, BarChart3, PenLine, CheckCircle, Wrench, TrendingUp } from "lucide-react"
+import { Building2, Shield, BarChart3, PenLine, CheckCircle, Wrench, TrendingUp, BookOpen } from "lucide-react"
 
 const projects = [
   {
@@ -50,6 +50,17 @@ const projects = [
     icon: <PenLine className="h-5 w-5" />,
     tags: ["内容质量评估", "实时 AI 打分", "LLM 应用"],
     href: "/editor",
+  },
+  {
+    title: "AI 知识库体系",
+    subtitle: "Obsidian + Claude Code · 个人知识管理系统",
+    description:
+      "基于 Obsidian + Claude Code 搭建的 AI 驱动知识库系统。实现「说话即记录」的日记复盘流程，通过 Skills 自动化完成内容整理、素材归档、选题生成。核心理念：把 AI 从一次性工具变成终身助手，让每次创作都在已有积累上叠加。包含完整的文件夹体系设计、CLAUDE.md 配置、方法论沉淀流程。",
+    status: "搭建中",
+    statusType: "demo",
+    icon: <BookOpen className="h-5 w-5" />,
+    tags: ["知识管理", "AI 工作流", "Obsidian", "Claude Code", "自动化", "方法论沉淀"],
+    href: "/knowledge",
   },
   {
     title: "瑞幸4月运营分析",
@@ -103,7 +114,7 @@ export default function Home() {
           <p className="mb-2 text-sm font-medium tracking-widest text-primary uppercase">
             PROJECTS
           </p>
-          <h2 className="text-3xl font-bold text-foreground">五个 AI 项目</h2>
+          <h2 className="text-3xl font-bold text-foreground">六个 AI 项目</h2>
           <p className="mt-2 text-muted-foreground">真实部署 · 可交互 Demo · 非课程作业</p>
         </div>
 
