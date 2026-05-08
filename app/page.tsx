@@ -173,17 +173,9 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground">
-        <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-6 py-8 sm:flex-row">
-          <div>
-            <p className="font-semibold">伍乐漫 · leman1lucky1017@gmail.com</p>
-            <p className="text-sm opacity-80">墨尔本大学数学统计硕士 · 2026届 · AI 产品实践者</p>
-          </div>
-          <Link
-            href="#"
-            className="rounded-full bg-white px-6 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-white/90"
-          >
-            查看完整作品集 →
-          </Link>
+        <div className="mx-auto max-w-5xl px-6 py-8 text-center">
+          <p className="font-semibold">伍乐漫 · leman1lucky1017@gmail.com</p>
+          <p className="text-sm opacity-80">墨尔本大学数学统计硕士 · 2026届 · AI 产品实践者</p>
         </div>
       </footer>
     </main>
