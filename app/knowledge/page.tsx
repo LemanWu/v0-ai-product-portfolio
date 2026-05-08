@@ -205,7 +205,7 @@ export default function KnowledgePage() {
         {/* Status */}
         <section className="rounded-xl border border-yellow-200 bg-yellow-50 p-6 text-center">
           <p className="font-medium text-yellow-800">
-            该系统正在搭建中，完整教程将在后续更新
+            该系统正在搭建中，完整内容将在后续更新
           </p>
           <p className="mt-2 text-sm text-yellow-700">
             目前已完成：环境搭建、文件夹结构、日记复盘流程、部分 Skills
