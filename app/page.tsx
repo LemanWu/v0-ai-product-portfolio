@@ -71,7 +71,7 @@ const projects = [
     statusType: "demo",
     icon: <TrendingUp className="h-5 w-5" />,
     tags: ["产品设计", "信息流优化", "用户体验", "交互设计"],
-    href: "https://xhs-deploy.vercel.app/",
+    href: "https://xhs.lemanw.com",
     external: true,
   },
 ]
