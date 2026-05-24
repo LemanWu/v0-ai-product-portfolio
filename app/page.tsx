@@ -63,15 +63,16 @@ const projects = [
     href: "/knowledge",
   },
   {
-    title: "瑞幸4月运营分析",
-    subtitle: "用户运营 · 知识图谱可视化",
+    title: "小红书产品需求 Demo",
+    subtitle: "首页信息流 · 分类优化设计",
     description:
-      "对瑞幸咖啡4月公众号活动的深度拆解。分析其「向上争夺精品用户、向外渗透非咖啡圈、向深绑定存量用户」三大策略，以及产品分层、渠道分层、用户分层的精细化运营逻辑。用知识图谱方式可视化呈现各活动之间的关联。",
-    status: "运营分析",
+      "针对小红书首页信息流的产品优化 Demo。重新设计了分类入口的交互方式，优化了内容卡片的信息层级和视觉呈现，提升用户浏览效率和内容发现体验。体现了对内容平台首页产品逻辑的理解和设计思考。",
+    status: "产品 Demo",
     statusType: "demo",
     icon: <TrendingUp className="h-5 w-5" />,
-    tags: ["用户运营分析", "知识图谱", "策略拆解", "数据洞察"],
-    href: "/luckin",
+    tags: ["产品设计", "信息流优化", "用户体验", "交互设计"],
+    href: "https://xhs.lemanw.com",
+    external: true,
   },
 ]
 
@@ -119,10 +120,17 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-6">
-          {projects.map((project) => (
-            <Link
+          {projects.map((project) => {
+            const isExternal = 'external' in project && project.external
+            const LinkComponent = isExternal ? 'a' : Link
+            const linkProps = isExternal 
+              ? { href: project.href, target: "_blank", rel: "noopener noreferrer" }
+              : { href: project.href }
+            
+            return (
+            <LinkComponent
               key={project.title}
-              href={project.href}
+              {...linkProps}
               className="group block rounded-2xl border border-border bg-card p-6 shadow-sm transition-all hover:border-primary/30 hover:shadow-lg sm:p-8"
             >
               <div className="flex gap-4">
@@ -177,8 +185,9 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-            </Link>
-          ))}
+            </LinkComponent>
+          )
+          })}
         </div>
       </section>
 
